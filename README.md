@@ -1,5 +1,4 @@
 # SuperMarketGo  
-**A Modular Smart Grocery Web Platform**
 
 SuperMarketGo is a web-based grocery shopping platform designed to modernize traditional retail workflows by combining **digital product browsing, persistent cart management, simulated checkout, and real-time delivery tracking** into a single, modular web application.
 The project emphasizes **software engineering principles**, including separation of concerns, modular architecture, maintainability, and clear system documentation, rather than relying on heavy frontend frameworks.
