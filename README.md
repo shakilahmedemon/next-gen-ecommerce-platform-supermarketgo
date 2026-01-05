@@ -1,16 +1,9 @@
 # SuperMarketGo  
 **A Modular Smart Grocery Web Platform**
 
-SuperMarketGo is a web-based grocery shopping platform designed to modernize
-traditional retail workflows by combining **digital product browsing,
-persistent cart management, simulated checkout, and real-time delivery
-tracking** into a single, modular web application.
+SuperMarketGo is a web-based grocery shopping platform designed to modernize traditional retail workflows by combining **digital product browsing, persistent cart management, simulated checkout, and real-time delivery tracking** into a single, modular web application.
+The project emphasizes **software engineering principles**, including separation of concerns, modular architecture, maintainability, and clear system documentation, rather than relying on heavy frontend frameworks.
 
-The project emphasizes **software engineering principles**, including
-separation of concerns, modular architecture, maintainability, and clear
-system documentation, rather than relying on heavy frontend frameworks.
-
----
 
 ## Motivation & Problem Statement
 
@@ -21,11 +14,8 @@ Traditional grocery shopping suffers from several inefficiencies:
 - Checkout queues create friction in the buying experience
 - Customers lack visibility into order fulfillment and delivery status
 
-SuperMarketGo addresses these issues by **digitizing the entire shopping
-pipeline**, from browsing to delivery tracking, while remaining lightweight
-and framework-free.
+SuperMarketGo addresses these issues by **digitizing the entire shopping pipeline**, from browsing to delivery tracking, while remaining lightweight and framework-free.
 
----
 
 ## Project Objectives
 
@@ -36,7 +26,6 @@ and framework-free.
 - Demonstrate **clean frontend architecture** using Vanilla JavaScript
 - Apply **software engineering lifecycle practices**, not just UI design
 
----
 
 ## Key Features
 
@@ -64,7 +53,6 @@ and framework-free.
 - Simulated real-time movement
 - Route visualization with OpenStreetMap tiles
 
----
 
 ## System Architecture
 
@@ -78,16 +66,6 @@ JavaScript Modules (Behavior)
 ↓
 Data & Utilities (Support)
 
----
-
-### Architectural Principles Applied
-- Separation of Concerns
-- Single Responsibility Principle
-- Modular ES6 JavaScript
-- No global state pollution
-- Clear dependency flow
-
----
 
 ## Tech Stack
 
@@ -103,50 +81,6 @@ Data & Utilities (Support)
 ### State Management
 - **Browser LocalStorage**
 
----
-
-## Project Structure
-SuperMarketGo/
-│
-├── public/
-│   ├── index.html              # Main application entry
-│   └── tracking.html           # Real-time delivery tracking page
-│
-├── src/
-│   ├── css/
-│   │   ├── base.css            # Global styles, fonts, scrollbars
-│   │   ├── theme.css           # Tailwind config & brand colors
-│   │   ├── components.css      # Buttons, modals, cards, toasts
-│   │   └── tracking.css        # Delivery tracking UI styles
-│   │
-│   ├── data/
-│   │   └── products.js         # Product catalog (static mock data)
-│   │
-│   ├── js/
-│   │   ├── app.js              # Application bootstrap
-│   │   ├── nav.js              # Navigation rendering
-│   │   ├── store.js            # Cart & state management
-│   │   ├── products.js         # Product listing & search logic
-│   │   ├── checkout.js         # Checkout & QR payment logic
-│   │   ├── reviews.js          # Product reviews system
-│   │   ├── notifications.js    # Toast notifications
-│   │   └── tracking.js         # Map & delivery simulation
-│   │
-│   └── utils/
-│       ├── dom.js              # DOM helper utilities
-│       └── format.js           # Price/time formatting helpers
-│
-├── assets/
-│   ├── images/
-│   └── screenshots/
-│
-├── docs/
-│   ├── SRS.pdf                 # Full Software Requirements Specification
-│   └── architecture.png
-│
-├── README.md
-├── LICENSE
-└── .gitignore
 
 ## Application Flow
 
@@ -157,7 +91,6 @@ SuperMarketGo/
 5. User interacts with cart and checkout
 6. Order tracking is visualized on a map
 
----
 
 ## Testing & Validation
 
@@ -167,7 +100,6 @@ SuperMarketGo/
 - Map rendering and movement testing
 - Requirement traceability through SRS
 
----
 
 ## Documentation
 
@@ -175,14 +107,12 @@ SuperMarketGo/
 - Functional and non-functional requirements defined
 - System assumptions and constraints documented
 
----
 
 ## Demo & Screenshots
 
 > 📸 Screenshots: *(add images here)*  
 > 🎬 Demo Video: *(add link here)*  
 
----
 
 ## Future Enhancements
 
@@ -192,15 +122,12 @@ SuperMarketGo/
 - Real-time order updates via WebSockets
 - Mobile-first PWA support
 
----
 
 ## Author
 
-**Shakil Ahmed**  
-Software Engineering  
-Interests: Web Development, System Architecture, AI-Driven Applications
+**AHMED MD SHAKIL**  
+Studying Software Engineering at Yangzhou University, China.
 
----
 
 ## License
 
