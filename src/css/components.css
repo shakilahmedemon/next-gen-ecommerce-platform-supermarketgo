@@ -1,0 +1,46 @@
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 500px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #111827;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+}
