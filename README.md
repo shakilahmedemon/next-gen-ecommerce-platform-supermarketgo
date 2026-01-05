@@ -9,77 +9,71 @@ The project emphasizes **software engineering principles**, including separation
 
 Traditional grocery shopping suffers from several inefficiencies:
 
-- Customers cannot verify product availability before visiting the store
-- Searching for items inside physical stores is time-consuming
-- Checkout queues create friction in the buying experience
-- Customers lack visibility into order fulfillment and delivery status
+1. Customers cannot verify product availability before visiting the store
+2. Searching for items inside physical stores is time-consuming
+3. Checkout queues create friction in the buying experience
+4. Customers lack visibility into order fulfillment and delivery status
 
 SuperMarketGo addresses these issues by **digitizing the entire shopping pipeline**, from browsing to delivery tracking, while remaining lightweight and framework-free.
 
 
 ## Project Objectives
 
-- Provide a **digital product catalog** with search and category browsing
-- Implement a **persistent shopping cart** using browser storage
-- Simulate a **checkout and payment workflow**
-- Visualize **real-time delivery tracking** on an interactive map
-- Demonstrate **clean frontend architecture** using Vanilla JavaScript
-- Apply **software engineering lifecycle practices**, not just UI design
+1. Provide a **digital product catalog** with search and category browsing
+2. Implement a **persistent shopping cart** using browser storage
+3. Simulate a **checkout and payment workflow**
+4. Visualize **real-time delivery tracking** on an interactive map
+5. Demonstrate **clean frontend architecture** using Vanilla JavaScript
+6. Apply **software engineering lifecycle practices**, not just UI design
 
 
 ## Key Features
 
 ### Product Browsing
-- Structured product catalog
-- Category-based organization
-- Dynamic rendering using JavaScript modules
+1. Structured product catalog
+2. Category-based organization
+3. Dynamic rendering using JavaScript modules
 
 ### Cart Management
-- Add/remove items
-- Persistent cart using LocalStorage
-- Real-time cart count updates in navigation
+1. Add/remove items
+2. Persistent cart using LocalStorage
+3. Real-time cart count updates in navigation
 
 ### Checkout Simulation
-- Order validation
-- Simulated payment confirmation
-- User feedback via notifications
+1. Order validation
+2. Simulated payment confirmation
+3. User feedback via notifications
 
 ### User Notifications
-- Toast-based success and error messages
-- Non-intrusive UX feedback
+1. Toast-based success and error messages
+2. Non-intrusive UX feedback
 
 ### Live Delivery Tracking
-- Interactive map using Leaflet.js
-- Simulated real-time movement
-- Route visualization with OpenStreetMap tiles
+1. Interactive map using Leaflet.js
+2. Simulated real-time movement
+3. Route visualization with OpenStreetMap tiles
 
 
 ## System Architecture
 
 The application follows a **modular, component-oriented architecture**:
 
-HTML (Structure)
-↓
-CSS (Presentation)
-↓
-JavaScript Modules (Behavior)
-↓
-Data & Utilities (Support)
+HTML (Structure) → CSS (Presentation) → JavaScript Modules (Behavior) → Data & Utilities (Support)
 
 
 ## Tech Stack
 
 ### Frontend
-- **HTML5** — semantic structure
-- **Tailwind CSS** — utility-first styling
-- **Vanilla JavaScript (ES Modules)** — application logic
+1. **HTML5** — semantic structure
+2. **Tailwind CSS** — utility-first styling
+3. **Vanilla JavaScript (ES Modules)** — application logic
 
 ### Mapping & Visualization
-- **Leaflet.js**
-- **OpenStreetMap**
+1. **Leaflet.js**
+2. **OpenStreetMap**
 
 ### State Management
-- **Browser LocalStorage**
+1. **Browser LocalStorage**
 
 
 ## Application Flow
@@ -94,18 +88,18 @@ Data & Utilities (Support)
 
 ## Testing & Validation
 
-- Functional validation against project requirements
-- Manual UI testing for all user flows
-- LocalStorage state verification
-- Map rendering and movement testing
-- Requirement traceability through SRS
+1. Functional validation against project requirements
+2. Manual UI testing for all user flows
+3. LocalStorage state verification
+4. Map rendering and movement testing
+5. Requirement traceability through SRS
 
 
 ## Documentation
 
-- **Software Requirements Specification (SRS)** included
-- Functional and non-functional requirements defined
-- System assumptions and constraints documented
+1. **Software Requirements Specification (SRS)** included
+2. Functional and non-functional requirements defined
+3. System assumptions and constraints documented
 
 
 ## Demo & Screenshots
@@ -116,11 +110,11 @@ Data & Utilities (Support)
 
 ## Future Enhancements
 
-- Backend integration (Firebase / REST API)
-- Real authentication & payment gateway
-- Admin dashboard for inventory management
-- Real-time order updates via WebSockets
-- Mobile-first PWA support
+1. Backend integration (Firebase / REST API)
+2. Real authentication & payment gateway
+3. Admin dashboard for inventory management
+4. Real-time order updates via WebSockets
+5. Mobile-first PWA support
 
 
 ## Author
