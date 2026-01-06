@@ -52,6 +52,14 @@ SuperMarketGo addresses these issues by **digitizing the entire shopping pipelin
 2. Simulated real-time movement
 3. Route visualization with OpenStreetMap tiles
 
+[System Context](assets/diagrams/component_architecture.png)
+[GPS Interpolation Algorithm](assets/diagrams/system_context_diagram.png)
+[System Context](assets/diagrams/interpolation_algorithm_logic.png)
+[GPS Interpolation Algorithm](assets/diagrams/performance_benchmarks.png)
+[System Context](assets/diagrams/requirements_traceability_matrix.png)
+[GPS Interpolation Algorithm](assets/diagrams/shopping_frustrations.png)
+[System Context](assets/diagrams/stakeholder_analysis.png)
+[GPS Interpolation Algorithm](assets/diagrams/use_case_diagram.png)
 
 ## System Architecture
 
