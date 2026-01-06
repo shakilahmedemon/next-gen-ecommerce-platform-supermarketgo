@@ -106,10 +106,10 @@ HTML (Structure) → CSS (Presentation) → JavaScript Modules (Behavior) → Da
 3. System assumptions and constraints documented
 
 
-## Demo & Screenshots
+## Screenshots & Video
 
-> 📸 Screenshots: *(add images here)*  
-> 🎬 Demo Video: *(add link here)*  
+> 📸 Screenshots: *(will be added)*  
+> 🎬 Video: *(will be added)*  
 
 
 ## Future Enhancements
