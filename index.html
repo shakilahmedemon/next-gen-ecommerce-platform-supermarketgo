@@ -4,24 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuperMarketGo - Your Online Supermarket</title>
-    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load Phosphor icons via CDN -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/components.css">
+    <!-- Leaflet (OpenStreetMap) for demo tracking map (no API key required) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+oZbNq8fGk2Zg1gq0h2mWk3nKQF4f4h9g6k3wM6mM=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-QV6Y6YEl1Gk7b0XqvWkz3eE4xqz8bq3mZ0V+Z4Y5f0M=" crossorigin=""></script>
+    <!-- QR Code library for payment QR codes -->
+    <script>
+        // Load QR Code library with multiple fallback CDNs
+        (function() {
+            const cdnSources = [
+                'https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js',
+                'https://unpkg.com/qrcode@1.5.3/build/qrcode.min.js',
+                'https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.5.3/qrcode.min.js'
+            ];
+            
+            let currentIndex = 0;
+            
+            function loadScript(src) {
+                return new Promise((resolve, reject) => {
+                    const script = document.createElement('script');
+                    script.src = src;
+                    script.crossOrigin = 'anonymous';
+                    script.onload = () => {
+                        // Wait a moment for QRCode to be available
+                        setTimeout(() => {
+                            if (typeof QRCode !== 'undefined') {
+                                console.log('QRCode library loaded from:', src);
+                                resolve();
+                            } else {
+                                reject(new Error('QRCode not available after load'));
+                            }
+                        }, 50);
+                    };
+                    script.onerror = () => {
+                        reject(new Error('Failed to load script'));
+                    };
+                    document.head.appendChild(script);
+                });
+            }
+            
+            function tryLoadNext() {
+                if (currentIndex >= cdnSources.length) {
+                    console.error('All QRCode CDN sources failed to load');
+                    return;
+                }
+                
+                loadScript(cdnSources[currentIndex])
+                    .then(() => {
+                        // Successfully loaded
+                    })
+                    .catch(() => {
+                        currentIndex++;
+                        tryLoadNext();
+                    });
+            }
+            
+            // Start loading
+            tryLoadNext();
+        })();
+    </script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Create a custom color palette based on your images
+                        'theme-purple': {
+                            DEFAULT: '#4a044e', // A deep purple
+                            '800': '#581c87', // A slightly lighter purple
+                            '700': '#6b21a8',
+                            '100': '#f3e8ff',
+                            '50': '#faf5ff'
+                        },
+                        'theme-pink': {
+                            DEFAULT: '#fce7f3',
+                            '700': '#9d174d'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="antialiased">
-    <!-- Navigation will be dynamically rendered -->
-    <nav id="main-nav" class="sticky top-0 z-50 p-4"></nav>
-    
-    <!-- Main content area -->
+
+    <!-- 
+      HEADER / NAVIGATION 
+      This will be dynamically rendered
+    -->
+    <nav id="main-nav" class="sticky top-0 z-50 p-4">
+        <!-- Navigation content is injected here by renderNav() -->
+    </nav>
+
+    <!-- 
+      MAIN CONTENT AREA 
+      This container will be dynamically filled by JavaScript
+    -->
     <main id="app-container" class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12 min-h-[calc(100vh-280px)]">
         <!-- Content will be injected here -->
     </main>
-    
-    <!-- Footer -->
+
+    <!-- 
+      FOOTER 
+    -->
     <footer class="bg-theme-purple-800 text-purple-100 mt-12">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
@@ -30,12 +130,14 @@
             </div>
         </div>
     </footer>
-    
-    <!-- Toast notification -->
+
+    <!-- 
+      TOAST NOTIFICATION 
+    -->
     <div id="toast-notification">
         Item added to cart!
     </div>
-    
+ 
     <!-- Reviews Modal -->
     <div id="reviews-modal" class="modal-backdrop" aria-hidden="true">
         <div class="modal-content">
@@ -71,13 +173,7 @@
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="js/utils.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/products.js"></script>
-    <script src="js/cart.js"></script>
-    <script src="js/checkout.js"></script>
-    <script src="js/profile.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Application JavaScript -->
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
