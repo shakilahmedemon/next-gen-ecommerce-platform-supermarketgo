@@ -1,36 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>SuperMarketGo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="../src/css/base.css">
-  <link rel="stylesheet" href="../src/css/theme.css">
-  <link rel="stylesheet" href="../src/css/components.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperMarketGo - Your Online Supermarket</title>
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
+<body class="antialiased">
+    <!-- Navigation will be dynamically rendered -->
+    <nav id="main-nav" class="sticky top-0 z-50 p-4"></nav>
+    
+    <!-- Main content area -->
+    <main id="app-container" class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12 min-h-[calc(100vh-280px)]">
+        <!-- Content will be injected here -->
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-theme-purple-800 text-purple-100 mt-12">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2025 SuperMarketGo. All rights reserved.</p>
+                <p class="mt-4 md:mt-0">Your one-stop shop for online groceries.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Toast notification -->
+    <div id="toast-notification">
+        Item added to cart!
+    </div>
+    
+    <!-- Reviews Modal -->
+    <div id="reviews-modal" class="modal-backdrop" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-lg font-semibold" id="reviews-modal-title">Product Reviews</h3>
+                <button id="close-reviews-modal" class="modal-close">✕</button>
+            </div>
+            <div id="reviews-list" class="p-4 overflow-auto" style="flex:1 1 auto;">
+                <!-- Reviews will be injected here -->
+            </div>
+            <div class="p-4 border-t bg-gray-50">
+                <form id="review-form" class="space-y-3">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Rating</label>
+                        <select id="review-rating" required class="mt-1 block w-24 border border-gray-300 rounded px-2 py-2">
+                            <option value="5">5 ★</option>
+                            <option value="4">4 ★</option>
+                            <option value="3">3 ★</option>
+                            <option value="2">2 ★</option>
+                            <option value="1">1 ★</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Your Review</label>
+                        <textarea id="review-text" required rows="3" class="mt-1 block w-full border border-gray-300 rounded px-3 py-2"></textarea>
+                    </div>
+                    <input type="hidden" id="review-product-id">
+                    <div class="flex justify-end">
+                        <button type="submit" class="bg-theme-purple-800 text-white font-bold py-2 px-4 rounded">Submit Review</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-<body>
-  <!-- Navbar -->
-  <nav id="navbar"></nav>
-
-  <!-- Main App -->
-  <main id="app" class="p-6"></main>
-
-  <!-- Modals -->
-  <div id="modal-root"></div>
-
-  <!-- Toast -->
-  <div id="toast-root"></div>
-
-  <!-- App Bootstrap -->
-  <script type="module" src="../src/js/app.js"></script>
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
