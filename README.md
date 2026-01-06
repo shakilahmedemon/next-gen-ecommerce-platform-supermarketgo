@@ -62,17 +62,10 @@ HTML (Structure) → CSS (Presentation) → JavaScript Modules (Behavior) → Da
 
 ## Tech Stack
 
-### Frontend
-1. **HTML5** — semantic structure
-2. **Tailwind CSS** — utility-first styling
-3. **Vanilla JavaScript (ES Modules)** — application logic
-
-### Mapping & Visualization
-1. **Leaflet.js**
-2. **OpenStreetMap**
-
-### State Management
-1. **Browser LocalStorage**
+1. Frontend: HTML5, Tailwind CSS, Vanilla JavaScript (ES Modules).
+2. Backend: Google Firebase (Firestore & Auth) for a serverless architecture.
+3. Visualization: Leaflet.js for geospatial data rendering.
+4. State: Real-time listeners (onSnapshot) for multi-device synchronization.
 
 
 ## Application Flow
