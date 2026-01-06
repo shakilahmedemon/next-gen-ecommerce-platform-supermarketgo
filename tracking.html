@@ -1,31 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Order Tracking</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Leaflet -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
-
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
-  </script>
-
-  <link rel="stylesheet" href="../src/css/base.css">
-  <link rel="stylesheet" href="../src/css/tracking.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Tracking - SuperMarketGo</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/tracking.css">
 </head>
-
 <body>
-  <h1 class="text-xl font-bold p-4">Live Delivery Tracking</h1>
-  <div id="map"></div>
+    <div class="header">
+        <div class="logo">Super<span>Market</span>Go</div>
+        <button class="back-button" id="back-button">
+            ← Back to Store
+        </button>
+    </div>
+    
+    <div class="container">
+        <h1 class="page-title">Real-Time Order Tracking</h1>
+        
+        <div class="tracking-container">
+            <div class="map-section">
+                <div id="map"></div>
+            </div>
+            
+            <div class="details-section">
+                <div class="info-card">
+                    <div class="info-label">Order ID</div>
+                    <div class="info-value" id="order-id">ORD-000000</div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-label">Status</div>
+                    <div class="status-badge in-progress" id="status-badge">
+                        Preparing Order
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="progress-header">
+                        <div class="info-label">Delivery Progress</div>
+                        <div class="info-value" id="progress-percent">0%</div>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="progress-bar"></div>
+                    </div>
+                    
+                    <div class="progress-steps">
+                        <div class="progress-step completed">
+                            <div class="step-dot">✓</div>
+                            <div class="step-label">Ordered</div>
+                        </div>
+                        <div class="progress-step active">
+                            <div class="step-dot">●</div>
+                            <div class="step-label">Preparing</div>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-dot">○</div>
+                            <div class="step-label">Out for Delivery</div>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-dot">📍</div>
+                            <div class="step-label">Delivered</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-label">Delivery Vehicle</div>
+                    <div class="info-value" id="vehicle-emoji">🏍️</div>
+                    <div class="info-value" id="vehicle-type">Fast Delivery Bike</div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-label">Driver</div>
+                    <div class="info-value" id="driver-name">Alex Morgan</div>
+                    <div class="info-value" id="driver-rating">⭐ 4.9 (250 deliveries)</div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-label">Estimated Arrival</div>
+                    <div class="info-value" id="eta">5 mins</div>
+                    <div class="info-value" id="eta-time">by 2:45 PM</div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-label">Distance Remaining</div>
+                    <div class="info-value" id="distance">2.3 km</div>
+                    <div class="info-value" id="speed">45 km/h</div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="action-btn" id="call-driver">📞 Call</button>
+                    <button class="action-btn" id="message-driver">💬 Message</button>
+                    <button class="action-btn primary" id="refresh-tracking">🔄 Refresh</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Thank you for shopping with SuperMarketGo</p>
+    </div>
 
-  <script type="module">
-    import { initTracking } from "../src/js/tracking.js";
-    initTracking();
-  </script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Tracking JavaScript -->
+    <script src="js/tracking.js"></script>
 </body>
 </html>
