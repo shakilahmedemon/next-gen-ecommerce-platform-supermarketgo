@@ -125,8 +125,3 @@ HTML (Structure) → CSS (Presentation) → JavaScript Modules (Behavior) → Da
 
 **AHMED MD SHAKIL**  
 Studying Software Engineering at Yangzhou University, China.
-
-
-## License
-
-This project is for educational and portfolio purposes.
