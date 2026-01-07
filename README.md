@@ -12,7 +12,9 @@ Traditional grocery shopping suffers from several inefficiencies:
 2. Searching for items inside physical stores is time-consuming
 3. Checkout queues create friction in the buying experience
 4. Customers lack visibility into order fulfillment and delivery status
+
 [Top 3 Offline Shopping Problems](assets/diagrams/shopping_frustrations.png)
+
 SuperMarketGo addresses these issues by **digitizing the entire shopping pipeline**, from browsing to delivery tracking, while remaining lightweight and framework-free.
 
 
