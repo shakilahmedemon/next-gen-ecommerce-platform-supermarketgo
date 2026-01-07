@@ -12,7 +12,7 @@ Traditional grocery shopping suffers from several inefficiencies:
 2. Searching for items inside physical stores is time-consuming
 3. Checkout queues create friction in the buying experience
 4. Customers lack visibility into order fulfillment and delivery status
-
+[Top 3 Offline Shopping Problems](assets/diagrams/shopping_frustrations.png)
 SuperMarketGo addresses these issues by **digitizing the entire shopping pipeline**, from browsing to delivery tracking, while remaining lightweight and framework-free.
 
 
@@ -24,6 +24,7 @@ SuperMarketGo addresses these issues by **digitizing the entire shopping pipelin
 4. Visualize **real-time delivery tracking** on an interactive map
 5. Demonstrate **clean frontend architecture** using Vanilla JavaScript
 6. Apply **software engineering lifecycle practices**, not just UI design
+[System Context](assets/diagrams/system_context_diagram.png)
 
 
 ## Key Features
@@ -51,26 +52,15 @@ SuperMarketGo addresses these issues by **digitizing the entire shopping pipelin
 1. Interactive map using Leaflet.js
 2. Simulated real-time movement
 3. Route visualization with OpenStreetMap tiles
-
-
-## Necessary Diagrams
-
-[Top 3 Offline Shopping Problems](assets/diagrams/shopping_frustrations.png)
-[System Context](assets/diagrams/system_context_diagram.png)
-[Component Architecture](assets/diagrams/component_architecture.png)
-[Performance Benchmarks](assets/diagrams/performance_benchmarks.png)
 [GPS](assets/diagrams/interpolation_algorithm_logic.png)
-[Use Case Diagram](assets/diagrams/use_case_diagram.png)
-[Stakeholder Analysis](assets/diagrams/stakeholder_analysis.png)
-[Requirment Traceability Matrix](assets/diagrams/requirements_traceability_matrix.png)
 
 
 ## System Architecture
 
 The application follows a **modular, component-oriented architecture**:
-
 HTML (Structure) → CSS (Presentation) → JavaScript Modules (Behavior) → Data & Utilities (Support)
-
+[Component Architecture](assets/diagrams/component_architecture.png)
+[Performance Benchmarks](assets/diagrams/performance_benchmarks.png)
 
 ## Tech Stack
 
@@ -97,6 +87,9 @@ HTML (Structure) → CSS (Presentation) → JavaScript Modules (Behavior) → Da
 3. LocalStorage state verification
 4. Map rendering and movement testing
 5. Requirement traceability through SRS
+[Use Case Diagram](assets/diagrams/use_case_diagram.png)
+[Stakeholder Analysis](assets/diagrams/stakeholder_analysis.png)
+[Requirment Traceability Matrix](assets/diagrams/requirements_traceability_matrix.png)
 
 
 ## Documentation
